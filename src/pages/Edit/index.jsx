@@ -1,4 +1,3 @@
-import CheckBox from "../../components/CheckBox";
 import Input from "../../components/Input";
 
 const Edit = () => {
@@ -11,7 +10,7 @@ const Edit = () => {
           <Input name="name" type="text" placeholder="Nama Produk..." label="Nama" value="test"/>
           <Input name="price" type="number" placeholder="Harga Produk..." label="Harga" value="20000000"/>
           <Input name="Stock" type="number" placeholder="Stock Produk..." label="Stock" value="10"/>
-          <CheckBox name="status" label="Active" checked/>
+          <Input name="status" type="checkbox" label="Active" checked/>
           <button type="submit" className="btn btn-primary">Simpan</button>
         </form>
       </div>

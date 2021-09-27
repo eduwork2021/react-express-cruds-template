@@ -1,10 +1,21 @@
-const Input = ({label, placeholder, name, value, type}) => {
-  return (
-    <div>
-      <label htmlFor={name}>{label}</label>
-      <input type={type} name={name} className="form-control" id={name} placeholder={placeholder} defaultValue={value}/>
-    </div>
-  )
+const Input = (props) => {
+  if(props.type === 'checkbox') {
+    return (
+      <div>
+        <input className={props.error && 'is-invalid'} {...props} />
+        <label>{props.label}</label>
+        { props.error && props.error.map(err => <p key={err} className="invalid">* {err}</p>)}
+      </div>
+    )
+  }else {
+    return (
+      <div>
+        <label>{props.label}</label>
+        <input className={`form-control ${props.error && 'is-invalid'}`} {...props} />
+        { props.error && props.error.map(err => <p key={err} className="invalid">* {err}</p>)}
+      </div>
+    )
+  }
 }
 
 export default Input;

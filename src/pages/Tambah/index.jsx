@@ -1,4 +1,4 @@
-import CheckBox from '../../components/CheckBox';
+
 import Input from '../../components/Input';
 import './index.scss';
 
@@ -12,7 +12,7 @@ const Tambah = () => {
           <Input name="name" type="text" placeholder="Nama Produk..." label="Nama"/>
           <Input name="price" type="number" placeholder="Harga Produk..." label="Harga"/>
           <Input name="Stock" type="number" placeholder="Stock Produk..." label="Stock"/>
-          <CheckBox name="status" label="Active"/>
+          <Input name="status" type="checkbox" label="Active" checked/>
           <button type="submit" className="btn btn-primary">Simpan</button>
         </form>
       </div>

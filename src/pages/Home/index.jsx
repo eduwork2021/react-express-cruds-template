@@ -5,7 +5,9 @@ const Home = () => {
   return(
     <div className="main">
       <Link to="/tambah" className="btn btn-primary">Tamah Produk</Link>
-
+      <div className="search">
+        <input type="text" placeholder="Masukan kata kunci..."/>
+      </div>
       <table className="table">
         <thead>
           <tr>
@@ -23,7 +25,7 @@ const Home = () => {
             <td className="text-center">
               <Link to="/detail" className="btn btn-sm btn-info">Detail</Link>
               <Link to="/edit" className="btn btn-sm btn-warning">Edit</Link>
-              <Link to="/delete" className="btn btn-sm btn-danger">Delete</Link>
+              <Link to="#" className="btn btn-sm btn-danger">Delete</Link>
             </td>
           </tr>
           <tr>
@@ -33,7 +35,7 @@ const Home = () => {
             <td className="text-center">
               <Link to="/detail" className="btn btn-sm btn-info">Detail</Link>
               <Link to="/edit" className="btn btn-sm btn-warning">Edit</Link>
-              <Link to="/delete" className="btn btn-sm btn-danger">Delete</Link>
+              <Link to="#" className="btn btn-sm btn-danger">Delete</Link>
             </td>
           </tr>
         </tbody>
